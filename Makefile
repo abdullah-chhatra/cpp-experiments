@@ -6,6 +6,8 @@ SOURCE_DIR = src
 PACKAGE_DIRS = 	. \
 								common
 
+INCLUDE_DIRS = $(foreach dir, $(PACKAGE_DIRS), -I$(SOURCE_DIR)/$(dir))
+
 BUILD_DIR = build
 OBJ_DIR = $(BUILD_DIR)/obj
 
@@ -20,7 +22,7 @@ $(BUILD_DIR)/main: $(OBJS)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDE_DIRS) -c $< -o $@
 
 clean:
 	rm -rf $(BUILD_DIR)

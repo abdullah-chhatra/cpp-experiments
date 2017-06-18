@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-using namespace commmon;
+using namespace common;
 
 ByteArray::ByteArray(ByteArray::Size size /* = 10U */)
   : _data(new ByteArray::Byte[size]),

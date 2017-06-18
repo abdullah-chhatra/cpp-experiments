@@ -1,9 +1,9 @@
-#ifndef _commmon_ByteArray_hpp_included_
-#define _commmon_ByteArray_hpp_included_
+#ifndef _common_ByteArray_hpp_included_
+#define _common_ByteArray_hpp_included_
 
 #include <cstdint>
 
-namespace commmon
+namespace common
 {
   class ByteArray
   {
